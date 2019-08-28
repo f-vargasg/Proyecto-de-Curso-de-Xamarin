@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HolaMundo.DetPersonajePage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="20">
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre:"  FontAttributes="Bold"  />
+                <Label Text="{Binding Name}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Altura:" FontAttributes="Bold"  />
+                <Label Text="{Binding Height}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Masa Corporal:"  FontAttributes="Bold"  />
+                <Label Text="{Binding Mass}" />
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Color de Cabello:" FontAttributes="Bold"  />
+                <Label Text="{Binding Hair_color}" />
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Color de Piel:" FontAttributes="Bold"  />
+                <Label Text="{Binding Skin_color}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Color de Ojos:" FontAttributes="Bold"  />
+                <Label Text="{Binding Eye_color}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Año de Nacimiento:" FontAttributes="Bold"  />
+                <Label Text="{Binding Birth_year}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Genero:"  FontAttributes="Bold"  />
+                <Label Text="{Binding Gender}" />
+            </StackLayout>
+
+            <Image VerticalOptions="Center" HeightRequest="250" Aspect="Fill">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="FileImageSource" Android="icon" iOS="icon" />
+                </Image.Source>
+            </Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HolaMundo.DetPeliculaPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="20">
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Titulo:" FontAttributes="Bold" />
+                <Label Text="{Binding Title}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Sinopsis:" FontAttributes="Bold" />
+                <Label Text="{Binding Opening_crawl}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Director:" FontAttributes="Bold" />
+                <Label Text="{Binding Director}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Productor:"  FontAttributes="Bold"/>
+                <Label Text="{Binding Producer}" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Fecha Exibida:" FontAttributes="Bold" />
+                <Label Text="{Binding Release_date }" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Personajes:" FontAttributes="Bold" />
+            </StackLayout>
+            <StackLayout>
+                <ListView x:Name="listViewPersonajes"
+                      IsPullToRefreshEnabled="True"
+                      IsRefreshing="{Binding IsBusy}"
+                      ItemsSource="{Binding Datos}"
+                      RefreshCommand="{Binding RefrescarCommand}"
+                      HasUnevenRows="True">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <StackLayout Orientation="Horizontal" Margin="10" Padding="0">
+                                    <Label TextColor="Black" Text="{Binding Name}"  />
+                                    <!--
+                                    <Label TextColor="Black" Text="{Binding UrlApi}" FontAttributes="Bold"  Margin="0" HorizontalOptions="EndAndExpand" />
+                                    -->
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
+            <!--
+            <Image VerticalOptions="Center" HeightRequest="250" Aspect="Fill">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="FileImageSource" Android="icon" iOS="icon" />
+                </Image.Source>
+            </Image>
+            -->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

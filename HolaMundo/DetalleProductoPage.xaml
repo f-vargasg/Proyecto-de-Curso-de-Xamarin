@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HolaMundo.DetalleProductoPage">
+    <ContentPage.Content>
+         <StackLayout Orientation="Vertical" Margin="20">
+            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre:" />
+                <Label Text="{Binding Nombre}" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                
+                <Label Text="Cantidad:" />
+                <Label Text="{Binding Cantidad}" />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal">
+                
+                <Label Text="Precio:" />
+                <Label Text="{Binding Precio, StringFormat='$${0}'}" />
+            </StackLayout>
+                        
+            <Image VerticalOptions="Center" HeightRequest="250" Aspect="Fill">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="FileImageSource" Android="icon" iOS="icon" />
+                </Image.Source>
+            </Image>
+         </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

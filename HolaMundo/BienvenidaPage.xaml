@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="HolaMundo.BienvenidaPage"
+             BackgroundColor="#1E92DF"
+             >
+    <StackLayout Orientation="Vertical"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 >
+        <Label FontSize="Large"  
+               x:Name="labelNombre" 
+               Text="Bienvenid@  Proyecto Curso X@amarin" />
+        
+        <!-- 
+        <Entry x:Name="entryNombre" Text="Hola, mundo!"  Placeholder="Indique su nombre" />
+        -->
+        <Button x:Name="botonComenzar" 
+                Text="Comenzar">
+            <Button.TextColor>
+                <OnPlatform x:TypeArguments="Color" iOS="Black" />
+            </Button.TextColor>
+        </Button>
+        
+        <!-- 
+        <Label Text="{Binding Text, Source={x:Reference entryNombre}}" />
+        <Label Text="{Binding Text, Source={x:Reference entryNombre}}" />
+        <Label Text="{Binding Text, Source={x:Reference entryNombre}}" />
+        <Label Text="{Binding Text, Source={x:Reference entryNombre}}" />
+        <Label Text="{Binding Text, Source={x:Reference entryNombre}}" />
+         -->
+    </StackLayout>
+</ContentPage>
